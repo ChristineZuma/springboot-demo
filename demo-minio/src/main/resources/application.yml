@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  # 配置文件上传大小限制
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# minio 参数配置
+minio:
+  endpoint: http://124.221.209.178/
+  port: 9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+  #secure 是否使用https,默认为true
+  secure: false
+  bucketName: test
+
+
+
