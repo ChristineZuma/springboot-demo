@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.8:3306/flowable-demo?serverzone=UTC&nullCatalogMeansCurrent=true
+    username: root
+    password: 123456
+flowable:
+  #关闭定时任务
+  async-executor-activate: false
+  #当flowable发现库与数据库表结构不一致时，会自动将数据库表结构升级至新版本
+  database-schema-update: true
+
+logging:
+  level:
+    root: info # 根日志，默认级别是info，如果使用info，可以不写这一行
+    com.moyundong.dao: debug # 子级别日志，可以指定到自己的某个包
+  file:
+    name: /log/flowable-debug.log
